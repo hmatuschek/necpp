@@ -9,7 +9,7 @@ set(libnecpp_HEADERS libnecpp.h misc.h   matrix_algebra.h   electromag.h
     math_util.h common.h typesave_stdint.h nec_debug.h nec_wire.h)
 
 configure_file("${PROJECT_SOURCE_DIR}/necpp/src/config.h.in"
-               "${PROJECT_BINARY_DIR}/necpp/src/config.h" )
+					"${PROJECT_BINARY_DIR}/necpp/src/config.h" )
 
 add_library(necpp ${libnecpp_SOURCES})
 
