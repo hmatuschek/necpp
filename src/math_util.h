@@ -31,15 +31,18 @@
 //#define USING_EIGEN_3VECT 1
 
 #if USING_EIGEN_ARRAY
-    #pragma GCC diagnostic push
-    #pragma GCC diagnostic ignored "-Wshadow"
-    #pragma GCC diagnostic ignored "-Wconversion"
-    #include <Eigen/Dense>
-    #pragma GCC diagnostic pop
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wshadow"
+  #pragma GCC diagnostic ignored "-Wconversion"
+  #include <Eigen/Dense>
+  #pragma GCC diagnostic pop
 
-  typedef Eigen::Matrix<int32_t, Eigen::Dynamic, 1>  int_array;
-  typedef Eigen::Matrix<nec_float, Eigen::Dynamic, 1>  real_array;
-  typedef Eigen::Matrix<nec_complex, Eigen::Dynamic, 1>  complex_array;
+  typedef Eigen::VectorXi   int_array;
+  typedef Eigen::VectorXd   real_array;
+  typedef Eigen::VectorXcd  complex_array;
+  typedef Eigen::MatrixXi   int_matrix;
+  typedef Eigen::MatrixXd   real_matrix;
+  typedef Eigen::MatrixXcd  complex_matrix;
 #else
   // Use our own types rather than Eigen
   #include "safe_array.h"
@@ -54,7 +57,7 @@
 
 
 inline void vector_fill(complex_array& x, int64_t start, int64_t N, const nec_complex& y) {
-  x.fill(start, N, y);
+  x.fill(start,N,y);
 }
 
 
