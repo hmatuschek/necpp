@@ -360,7 +360,7 @@ public:
   void wire(int tag_id, int segment_count,
   nec_float xw1, nec_float yw1, nec_float zw1,
   nec_float xw2, nec_float yw2, nec_float zw2,
-  nec_float rad, nec_float rdel, nec_float rrad);
+  nec_float rad, nec_float rdel=1.0, nec_float rrad=1.0);
 
   void sp_card(int ns,
       nec_float x1, nec_float y1, nec_float z1,

@@ -66,7 +66,7 @@ public:
                   nec_float xw1, nec_float yw1, nec_float zw1,	// first co-ordinate
                   nec_float xw2, nec_float yw2, nec_float zw2,	// second co-ordinate
                   nec_float rad,
-                  nec_float rdel, nec_float rrad);
+                  nec_float rdel=1.0, nec_float rrad=1.0);
                   
                   
   void arc( int tag_id, int segment_count, nec_float rada,

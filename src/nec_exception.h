@@ -23,8 +23,6 @@
 #include <string>
 #include <sstream>
 
-//#include "common.h"
-
 class nec_exception
 {
 public:
